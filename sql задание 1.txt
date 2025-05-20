@@ -1,0 +1,3 @@
+Select "Couriers".login, count("Orders".id) 
+From "Couriers" 
+LEFT JOIN "Orders" ON "Couriers".id = "Orders"."courierId" AND "Orders"."inDelivery"=true GROUP BY "Couriers".login;
